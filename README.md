@@ -66,7 +66,24 @@ Optionally, you may also want to use Stream Analytics and Power BI to visualise 
 
 ## The Code
 
+### host.json
 
+This file simply lists the version and sets up the Event Hub extension to be used by the app as per the documentation. It's pretty self explanatory but is necessary to be added or the extension is not recognised.
+
+```json
+{
+  "version": "2.0",
+    "extensions": {
+      "eventHubs": {
+        "batchCheckpointFrequency": 5,
+        "eventProcessorOptions": {
+          "maxBatchSize": 256,
+          "prefetchCount": 512
+        }
+      }
+    }
+}
+```
 
 ### Function1.cs
 
