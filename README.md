@@ -70,7 +70,7 @@ Optionally, you may also want to use Stream Analytics and Power BI to visualise 
 
 ### Function1.cs
 
-At the top of the function, we set up the trigger, in this case BlobTrigger, using a connection with the name csvblobstore. This connection is configured either in your local settings if testing locally, or in the Function App settings in Azure. We set this up as a Stream variable named myBlob which means we can just treat it as a file in C#. We also set up the Event Hub output as an IAsyncCollector which we can write output events to.
+At the top of the function, we set up the trigger, in this case BlobTrigger, using a connection with the name csvblobstore. This connection is configured either in your local settings if testing locally, or in the Function App settings in Azure. We set this up as a Stream variable named myBlob which means we can just treat it as a file in C#. We also set up the Event Hub output as an IAsyncCollector which we can write output events to. The whole function is async here as we will be sending multiple outputs from one input.
 
 ```CSHARP
 public static class Function1
