@@ -1,7 +1,7 @@
 # CSVBlobToEventHub
 Function to copy data from CSV and submit via function to Event Hubs
 
-This project is a function app that collects CSVs from Blob and injects the rows one at a time into an Event Hub instance with optional delay. This is written in C# but you could achieve the same in other languages.
+This project is a function app that collects CSVs from Blob and injects the rows one at a time into an Event Hub instance with optional delay. This is written in C# but you could achieve the same in other languages. See the [video here](https://youtu.be/_4yDWfaW89A)
 
 ## Introduction
 
